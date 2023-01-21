@@ -1,5 +1,6 @@
 # cmt-mser
 
+This repo contains the code for implementation of the paper "MULTIMODAL EMOTION RECOGNITION BASED ON DEEP TEMPORAL FEATURES USING CROSS-MODAL TRANSFOMER AND SELF-ATTENTION" submitted to ICASSP 2023. 
 
 The architecture of our proposed model
 
