@@ -1,3 +1,7 @@
 
 
 pickle file is required to be placed in this folder. The program will create .npy files in this folder.
+
+
+For textual feature extraction, we used 300-dimensional Glove vector. Can be found here-
+https://www.kaggle.com/datasets/rtatman/glove-global-vectors-for-word-representation
