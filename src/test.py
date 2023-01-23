@@ -4,9 +4,7 @@ from src.model import ATmodel, compute_accuracy
 from config import NUM_ATTENTION_HEADS, NUM_HIDDEN_LAYERS, HIDDEN_SIZE
 from config import AUDIO_DIM, TEXT_DIM, IMAGE_DIM
 from config import USE_TEXT, USE_AUDIO, USE_IMAGE
-from pytorch_transformers.modeling_bert import (BertConfig, BertEmbeddings,
-                                                BertEncoder, BertLayerNorm,
-                                                BertPreTrainedModel)
+
 import torch
 from torch.utils.data.sampler import SubsetRandomSampler
 from torch.utils.data import DataLoader, Dataset
