@@ -1,6 +1,6 @@
 import logging
 from src.model import MyDataset
-from src.model import MultiModalTransformer, compute_accuracy
+from src.model import ATmodel, compute_accuracy
 from config import NUM_ATTENTION_HEADS, NUM_HIDDEN_LAYERS, HIDDEN_SIZE
 from config import AUDIO_DIM, TEXT_DIM, IMAGE_DIM
 from config import USE_TEXT, USE_AUDIO, USE_IMAGE
@@ -21,7 +21,6 @@ torch.backends.cudnn.enabled = False
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 def test_model(PATH, test_imgs, test_aud, test_text, test_labels, test_lengths, max_length):
-    config = BertConfig.from_pretrained("bert-base-uncased", output_hidden_states=True)
     config.num_hidden_layers = NUM_HIDDEN_LAYERS
     config.num_attention_heads = NUM_ATTENTION_HEADS
     config.hidden_size = HIDDEN_SIZE
@@ -42,7 +41,7 @@ def test_model(PATH, test_imgs, test_aud, test_text, test_labels, test_lengths, 
                             )
     test_results = dict()
     for fold in range(4):
-        test_model = MultiModalTransformer(config, AUDIO_DIM, TEXT_DIM, IMAGE_DIM, max_length)
+        test_model = ATmodel(config, AUDIO_DIM, TEXT_DIM, IMAGE_DIM, max_length)
         if USE_AUDIO:
             model_path = PATH.replace("audio", "audio"+str(fold))
         elif USE_TEXT:
