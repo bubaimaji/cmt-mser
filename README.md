@@ -10,4 +10,4 @@ The architecture of our proposed model
 
 Dataset
 
-In this experiment, we used [IEMOCAP] (https://sail.usc.edu/iemocap/)dataset 
+In this experiment, we used [IEMOCAP] dataset (https://sail.usc.edu/iemocap/). 
